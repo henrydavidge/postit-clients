@@ -1,0 +1,13 @@
+from __future__ import absolute_import
+
+# import models into model package
+from .postit_create_post_it_table import PostitCreatePostItTable
+from .postit_create_post_it_table_response import PostitCreatePostItTableResponse
+from .postit_delete_api_key import PostitDeleteApiKey
+from .postit_delete_api_key_response import PostitDeleteApiKeyResponse
+from .postit_post_it import PostitPostIt
+from .postit_post_it_response import PostitPostItResponse
+from .postit_regenerate_api_key import PostitRegenerateApiKey
+from .postit_regenerate_api_key_response import PostitRegenerateApiKeyResponse
+from .postit_update_post_it_table import PostitUpdatePostItTable
+from .postit_update_post_it_table_response import PostitUpdatePostItTableResponse

@@ -1,0 +1,170 @@
+---
+swagger: "2.0"
+info:
+  version: ""
+  title: ""
+schemes:
+- "http"
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /api/1.0/create:
+    post:
+      tags:
+      - "PostItService"
+      summary: "PostItService.createPostItTable"
+      operationId: "createPostItTable"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/postitCreatePostItTable"
+      responses:
+        default:
+          description: "Description"
+          schema:
+            $ref: "#/definitions/postitCreatePostItTableResponse"
+      x-swagger-router-controller: "PostItService"
+  /api/1.0/delete:
+    post:
+      tags:
+      - "PostItService"
+      summary: "PostItService.deleteApiKey"
+      operationId: "deleteApiKey"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/postitDeleteApiKey"
+      responses:
+        default:
+          description: "Description"
+          schema:
+            $ref: "#/definitions/postitDeleteApiKeyResponse"
+      x-swagger-router-controller: "PostItService"
+  /api/1.0/post:
+    post:
+      tags:
+      - "PostItService"
+      summary: "PostItService.postIt"
+      operationId: "postIt"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/postitPostIt"
+      responses:
+        default:
+          description: "Description"
+          schema:
+            $ref: "#/definitions/postitPostItResponse"
+      x-swagger-router-controller: "PostItService"
+  /api/1.0/regenerate:
+    post:
+      tags:
+      - "PostItService"
+      summary: "PostItService.regenerateApiKey"
+      operationId: "regenerateApiKey"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/postitRegenerateApiKey"
+      responses:
+        default:
+          description: "Description"
+          schema:
+            $ref: "#/definitions/postitRegenerateApiKeyResponse"
+      x-swagger-router-controller: "PostItService"
+  /api/1.0/update:
+    post:
+      tags:
+      - "PostItService"
+      summary: "PostItService.updatePostItTable"
+      operationId: "updatePostItTable"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/postitUpdatePostItTable"
+      responses:
+        default:
+          description: "Description"
+          schema:
+            $ref: "#/definitions/postitUpdatePostItTableResponse"
+      x-swagger-router-controller: "PostItService"
+definitions:
+  postitCreatePostItTable:
+    type: "object"
+    properties:
+      path:
+        type: "string"
+        format: "string"
+      schema:
+        type: "string"
+        format: "string"
+      shard_name:
+        type: "string"
+        format: "string"
+  postitCreatePostItTableResponse:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+  postitDeleteApiKey:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+  postitDeleteApiKeyResponse:
+    type: "object"
+  postitPostIt:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+      event_time:
+        type: "integer"
+        format: "int64"
+      payload:
+        type: "string"
+        format: "string"
+  postitPostItResponse:
+    type: "object"
+  postitRegenerateApiKey:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+  postitRegenerateApiKeyResponse:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+  postitUpdatePostItTable:
+    type: "object"
+    properties:
+      api_key:
+        type: "string"
+        format: "string"
+      path:
+        type: "string"
+        format: "string"
+      schema:
+        type: "string"
+        format: "string"
+  postitUpdatePostItTableResponse:
+    type: "object"

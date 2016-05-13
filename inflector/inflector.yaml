@@ -1,0 +1,22 @@
+controllerPackage: io.swagger.handler
+modelPackage:  io.swagger.model
+swaggerUrl: ./src/main/swagger/swagger.yaml
+modelMappings:
+  # to enable explicit mappings, use this syntax:
+  DefinitionFromSwaggerSpecification: fully.qualified.path.to.Model
+  PostitCreatePostItTable : io.swagger.model.PostitCreatePostItTable
+  PostitCreatePostItTableResponse : io.swagger.model.PostitCreatePostItTableResponse
+  PostitDeleteApiKey : io.swagger.model.PostitDeleteApiKey
+  PostitDeleteApiKeyResponse : io.swagger.model.PostitDeleteApiKeyResponse
+  PostitPostIt : io.swagger.model.PostitPostIt
+  PostitPostItResponse : io.swagger.model.PostitPostItResponse
+  PostitRegenerateApiKey : io.swagger.model.PostitRegenerateApiKey
+  PostitRegenerateApiKeyResponse : io.swagger.model.PostitRegenerateApiKeyResponse
+  PostitUpdatePostItTable : io.swagger.model.PostitUpdatePostItTable
+  PostitUpdatePostItTableResponse : io.swagger.model.PostitUpdatePostItTableResponse
+  
+
+entityProcessors:
+  - json
+  - xml
+  - yaml
